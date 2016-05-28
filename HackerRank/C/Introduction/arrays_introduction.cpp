@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
-    int n,a[100];
+    int n,a[1000];
     int i;
     scanf("%d",&n);
     
