@@ -1,1 +1,1 @@
-Contains Solutions to Classic Problems of <a title="HackerRant Website Link" href="https://www.hackerrank.com/">HackerRant</a> (hackerrank) and <a title="HackerEarth Website Link" href="https://www.hackerearth.com">HackerEarth</a> . The Solutions are written in C/C++.</p>
+Contains Solutions to Classic Problems of <a title="HackerRank Website Link" href="https://www.hackerrank.com/">HackerRank</a> (HackerRank) and <a title="HackerEarth Website Link" href="https://www.hackerearth.com">HackerEarth</a> . The Solutions are written in C/C++.</p>
