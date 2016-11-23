@@ -1,0 +1,18 @@
+#!/bin/bash
+
+read x
+read y
+read z
+
+if [ "$x" == "$y" ]
+then
+	if [ "$x" -eq "$z" ]
+	then
+		echo "EQUILATERAL"
+	elif [ "$x" != "$z" ]
+	then
+		echo "ISOSCELES"
+	fi
+else
+	echo "SCALENE"
+fi
