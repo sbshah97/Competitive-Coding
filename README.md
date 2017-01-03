@@ -1,1 +1,14 @@
-Contains Solutions to Classic Problems of <a title="HackerRank Website Link" href="https://www.hackerrank.com/">HackerRank</a> (HackerRank) and <a title="HackerEarth Website Link" href="https://www.hackerearth.com">HackerEarth</a> . The Solutions are written in C/C++.</p>
+# Competitive Coding
+
+## About
+- Contains Solutions to Classic Problems of [HackerRank](https://www.hackerrank.com) and [HackerEarth](https://www.hackerearth.com). 
+- The Solutions are written in C or C++ and are updated regularly.
+
+## Usernames
+* **GitHub:** salman-bhai
+* **HackerRank:** SalmanBhai
+* **HackerEarth:** SalmanBhai
+* **CodeChef:** salman-bhai
+
+## Update
+- Repository last updated on **November 30th** 2016.
