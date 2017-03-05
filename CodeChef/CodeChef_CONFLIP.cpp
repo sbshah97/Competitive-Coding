@@ -3,8 +3,10 @@
 using namespace std;
 
 int main() {
+	
 	int t;
 	scanf("%d",&t);
+
 	while(t--) {
 		int g;
 		scanf("%d",&g);
@@ -17,48 +19,39 @@ int main() {
 			long long int n, i, q;
 			scanf("%lld %lld %lld",&i,&n,&q);
 
-			int coins[n];
+			long long int count_heads = 0, count_tails = 0;
 			
 			/*Step 1*/
-				//Condition for all heads initially
 				if(i == 1) {
-					for(long long int j = 0; j < n; j ++)
-						coins[j] = 0;
+					count_heads = n;
+
+					if(n % 2 == 1) {
+						count_heads = n/2;
+						count_tails = n/2 + 1;						
+					}
+					else if(n % 2 == 0) {
+						count_heads = n/2;
+						count_tails = n/2;
+					}
 				}
-				//Condition for all tails initially
 				else if(i == 2) {
-					for(long long int j = 0; j < n; j ++)
-						coins[j] = 1;
+					count_tails = n;
+
+					if(n % 2 == 1) {
+						count_heads = n/2 + 1;
+						count_tails = n/2;
+					}
+					else if(n % 2 == 0) {
+						count_heads = n/2;
+						count_tails = n/2;
+					}
 				}
 
 			/*Step 2*/
-				//Flip the coins based on number
-				if(n % 2 == 1) {
-					for(long long int j = 0; j < n; j += 2)
-						coins[j] = !coins[j]; 
-				}
-				else if(n % 2 == 0) {
-					for(long long int j = 1; j < n; j += 2) 
-						coins[j] = !coins[j];
-				}
-
-			/*Step 3*/
-				int count = 0;
-				//Check for value of q -> Heads
-				if(q == 1) {
-					for(int i = 0; i < n; i++)
-						if(coins[i] == 0)
-							count++;
-				}
-				//CHeck for value q -> Tails
-				else if(q == 2) {
-					for(int i = 0; i < n; i++)
-						if(coins[i] == 1)
-							count++;
-				}
-
-			/*Step 4*/
-				printf("%d\n",count );
+				if(q == 1)
+					printf("%lld\n",count_heads);
+				else if(q == 2)
+					printf("%lld\n",count_tails);
 		}
 	}
 
