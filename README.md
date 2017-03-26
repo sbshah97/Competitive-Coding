@@ -28,3 +28,5 @@ int main() {
 g++ -std=c++11 -O2 -Wall code.cpp -o bin
 ```
 
+## Cron Job added
+* Cron Job for Lenovo Ideapad added
