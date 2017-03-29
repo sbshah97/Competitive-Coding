@@ -11,4 +11,20 @@
 * **TopCoder:**
 
 ## Update
-- Repository last updated on **March 7th** 2017.
+- Repository last updated on **March 23rd** 2017.
+
+## Code Template
+```C
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	// solution comes here
+	return 0;
+}
+```
+
+## Code Compilation
+```bash
+g++ -std=c++11 -O2 -Wall code.cpp -o bin
+```
+
