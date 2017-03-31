@@ -2,32 +2,44 @@
 
 using namespace std;
 
+bool palindrome(int n) {
+	
+
+	int temp = 0, rem, orig = n, i = 0;
+	while(n > 0) {
+		rem = n % 10;
+		temp = temp*10 + rem;
+		n = n / 10;
+		i ++; 
+	}
+
+	if(orig == temp)
+		return true;
+	return false;
+}
+
 int main() {
 
 	int t;
 	scanf("%d",&t);
 	while(t--) {
-		int n;
+		int pal,n;
 		cin >> n;
 		int flag = 1;
+		n++;
 
 		while(flag) {
-			string pal_n = to_string(n);
-			string pal_inv;
-
-			for(int i = 0; i < pal_n.size(); i ++){
-				pal_inv[(pal_n.size())-1-i] = pal_n[i];
-			}
-			cout << "Reached";
-
-			if(pal_n.compare(pal_inv) == 0){
+			if(palindrome(n)) {
 				printf("%d\n",n);
 				flag = 0;
 			}
-			else
+			else {
 				n++;
+			}
 
 		}
+
+
 	}
 
 	return 0;

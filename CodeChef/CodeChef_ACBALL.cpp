@@ -6,24 +6,21 @@ int main() {
 	scanf("%d",&t);
 	while(t--) {
 
-		string y,x, z;
+		string y,x,z;
 		cin >> x;
 		cin >> y;
 
-		z = x;
+		z = "";
 
-		int i;
-		for(i = 0; x[i]!='\0'; i ++) {
+		for(int i = 0; i < x.size(); i ++) {
 			if(x[i] == 'W' && y[i] == 'W')
-				z[i] = 'B';
+				z += 'B';
 			else if(x[i] == 'B' && y[i] == 'B')
-				z[i] = 'W';
+				z += 'W';
 			else
-				z[i] = 'B';
+				z += 'B';
 		}
-
-		for(int j = 0; j < i; j++)
-			cout << z[i];
+		cout << z << "\n";
 
 	}
 
