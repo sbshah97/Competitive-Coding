@@ -30,7 +30,12 @@ int main() {
 		int count2 = 0; 
 
 		for(int i = n - 1; i >= 0; i --) {
-			if(m[v[i]] >= 2 && count1 == 0) {
+			if(m[v[i]] > 3 && count1 == 0) {
+				count1 = v[i];
+				count2 = v[i];
+				i = 0;
+			}
+			else if(m[v[i]] >= 2 && count1 == 0) {
 				count1 = v[i];
 				i--;
 			}

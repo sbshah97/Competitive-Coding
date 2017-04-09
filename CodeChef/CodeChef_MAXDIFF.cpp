@@ -1,21 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+long long int maximum(long long int x, long  long int y) {
+	return (x > y) ? x : y;
+}
+
 int main() {
 	int t;
 	scanf("%d",&t);
 	while(t--) {
-		int n, k, temp;
-		scanf("%d %d",&n,&k);
+		long long int n, k, temp;
+		scanf("%lld %lld",&n,&k);
 		vector<int> v;
 		for(int i = 0; i < n; i ++) {
-			scanf("%d",&temp);
+			scanf("%lld",&temp);
 			v.push_back(temp);
 		}
 
 		sort(v.begin(), v.end());
 
-		int chef1 = 0, kid1 = 0;
+		long long int chef1 = 0, kid1 = 0;
 
 		for(int i = 0; i < k; i ++) {
 			kid1 += v[i];
@@ -35,9 +39,9 @@ int main() {
 			chef2 += v[i];
 		}
 
-		int val = max(abs(chef2 - kid2), abs(chef1 - kid1));
+		long long int val = maximum(abs(chef2 - kid2), abs(chef1 - kid1));
 		
-		printf("%d\n",val);
+		printf("%lld\n",val);
 	}
 
 	return 0;

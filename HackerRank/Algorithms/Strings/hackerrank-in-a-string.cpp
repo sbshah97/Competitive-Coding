@@ -32,6 +32,18 @@ int main() {
 			}	
 		}
 
-		
+		int flag = 1;
+		std::map< char, int>::iterator it;
+		for(it = m.begin(); it != m.end(); it++) {
+			if((*it).second > map[(*it).first])
+				flag = 0;
+		}
+
+		if (flag) {
+			/* code */
+			printf("YES\n");
+		}
+		else 
+			printf("NO\n");
 	}
 }

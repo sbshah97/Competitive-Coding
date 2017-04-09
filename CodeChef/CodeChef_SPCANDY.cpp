@@ -5,12 +5,12 @@ int main() {
 	int t;
 	scanf("%d",&t);
 	while(t --) {
-		int n, k;
-		scanf("%d %d",&n,&k);
+		long long int n, k;
+		cin >> n >> k;
 		if(k == 0)
-			printf("%d %d\n",k,n);
+			printf("%lld %lld\n",k,n);
 		else
-			printf("%d %d\n",(int)n/k, (int)n%k);
+			printf("%lld %lld\n",(long long int)n/k, (long long int)n%k);
 	}
 
 	return 0;

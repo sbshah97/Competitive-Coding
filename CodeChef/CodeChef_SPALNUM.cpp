@@ -5,21 +5,21 @@ int main() {
 	int t;
 	scanf("%d",&t);
 	while(t--) {
-		int l,r;
-		scanf("%d %d",&l, &r);
+		long long int l,r;
+		scanf("%lld %lld",&l, &r);
 		
-		int count_x = 0, i;
+		long long int count_x = 0, i;
 
 		for(i = l; i <= r; i ++) {
-			int temp = i;
-			int arr[6], count = 0;
+			long long int temp = i;
+			long long int arr[6], count = 0;
 			while(temp > 0) {
 				arr[count++] = temp % 10;
 				temp /= 10;
 			}
 
 			temp = 0;
-			for(int j = count; j > 0; j --) {
+			for(long long int j = count; j > 0; j --) {
 				temp += (arr[count-j]*pow(10, j));
 			}
 			temp /= 10;
@@ -29,7 +29,7 @@ int main() {
 				count_x += i;
 		}
 
-		printf("%d\n",count_x);
+		printf("%lld\n",count_x);
 
 	}
 

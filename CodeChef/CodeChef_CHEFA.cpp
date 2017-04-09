@@ -24,5 +24,5 @@ int main() {
 		printf("%lld\n",input);
 	}
 
-
+	return 0;
 }
