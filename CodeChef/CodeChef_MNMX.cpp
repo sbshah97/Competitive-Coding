@@ -1,13 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int minimum(int a, int b) {
-	if(a < b)
-		return a;
-	else
-		return b;
-}
-
 int main() {
 	int t;
 	scanf("%d",&t);
@@ -15,12 +8,14 @@ int main() {
 		int n;
 		scanf("%d",&n);
 
-		int arr[n];
-		for(int i = 0; i < n; i ++)
+		int arr[n], min = INT_MAX;
+		for(int i = 0; i < n; i ++) {
 			scanf("%d",&arr[i]);
+			if(min > arr[i])
+				min = arr[i];
+		}
 
-		int cost = 0;
-		int min = *min_element(arr, arr+n);
+		printf("%d\n", min*(n-1));
 
 	}
 

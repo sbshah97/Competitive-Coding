@@ -21,17 +21,23 @@ int main() {
 			vm.push_back(temp);
 		}
 
-		vector<int>::iterator temp1 = vm.begin();
-		for(vector<int>::iterator itn = vn.begin(); itn != vn.end(); ++itn) {
-			if((*itn) == (*temp1)) {
+		int dp[n]={0};
+		if(vn[0] == vm[0]) {
+			dp[0] = 1;
+		}
+		else 
+			dp[0] = 0;
+
+		for(int i = 1; i < n; i ++) {
+			if(vn[i] == vm[dp[i-1]])
+				dp[i] = dp[i-1] + 1;
+			else
+				dp[i] = 0;
+		}
+
+		for(int i = 0; i < n; i ++) {
+			if(dp[i] == (vm.size()))
 				flag = 1;
-				for(vector<int>::iterator itm = vm.begin(); itm != vm.end(); ++itm, ++itn) {
-					if((*itn) == (*itm))
-						continue;
-					else 
-						flag = 0;	
-				}
-			}
 		}
 
 		if(flag) {
