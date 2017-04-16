@@ -11,19 +11,19 @@ int main() {
 		cin >> j;
 		cin >> s;
 
-		set<char> s1, s2;
+		set<char> set1;
 
 		for(int i = 0; i < j.size(); i ++) {
-			s1.insert(j[i]);
+			set1.insert(j[i]);
 		}
 
-		for(set<char>::iterator it1 = s1.begin(); it1 != s1.end(); ++it1) {
-			for(int i = 0; i < s.size(); i ++) {
-				if((*it1) == s[i])
-					count++;
-			}
+		for(int i = 0; i < s.size(); i ++) {
+			if(set1.find(s[i]) != set1.end())
+				count++;
 		}
 
 		printf("%d\n",count);
 	}
+
+	return 0;
 }
