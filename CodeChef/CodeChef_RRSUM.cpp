@@ -2,27 +2,25 @@
 using namespace std;
 
 int main() {
-	double n, m;
-	scanf("%lf %lf",&n,&m);
+	long long int n, m;
+	scanf("%lld %lld",&n,&m);
+
+	long long int min = n+2;
+	long long int max = 3*n;
 
 	while(m--) {
-		double q;
-		scanf("%lf",&q);
-		double val;
+		long long int q;
+		scanf("%lld",&q);
 
-		if(q < ((3*n)/2)) {
-			val = ((((n-1)/(((3*n)/2)-(n+1)))*(q-(n+1))) + 1);
+		if(q >= min && q <= max) {
+			if(q <= (min+max)/2)
+				printf("%lld\n", q-min+1);
+			else
+				printf("%lld\n",max-q+1);
 		}
-		else if(q == ((3*n)/2)) {
-			val = n;
-		}
-		else if(q > ((3*n)/2)) {
-			val = ((((1-n)/((2*n+1)-(3*n/2)))*(q-(2*n+1))) + 1);
-		}
-
-		if(val < 0)
-			printf("0\n");
 		else
-			printf("%.0lf\n",val);
+			printf("0\n");
 	}
+
+	return 0;
 }
